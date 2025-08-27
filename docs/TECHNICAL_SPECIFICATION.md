@@ -812,25 +812,17 @@ stateDiagram-v2
     
     ENV_STATE_ATTACK --> ENV_STATE_RELEASING : trigger_note_off()
     
-    note for ENV_STATE_OFF
-        振幅: 0.0
-        音声出力: なし
-    end note
+    ENV_STATE_OFF : 振幅 0.0
+    ENV_STATE_OFF : 音声出力 なし
     
-    note for ENV_STATE_ATTACK
-        振幅: 上昇中
-        継続時間: ~50ms
-    end note
+    ENV_STATE_ATTACK : 振幅 上昇中
+    ENV_STATE_ATTACK : 継続時間 約50ms
     
-    note for ENV_STATE_PRESSED
-        振幅: 1.0維持
-        キー押下中
-    end note
+    ENV_STATE_PRESSED : 振幅 1.0維持
+    ENV_STATE_PRESSED : キー押下中
     
-    note for ENV_STATE_RELEASING
-        振幅: 減衰中
-        継続時間: ~200ms
-    end note
+    ENV_STATE_RELEASING : 振幅 減衰中
+    ENV_STATE_RELEASING : 継続時間 約200ms
 ```
 
 #### 5.1.4 timbre_t
